@@ -1,8 +1,8 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Only allow POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -18,8 +18,8 @@ export default async function handler(req, res) {
 
     // Send notification email to your team
     const { data, error } = await resend.emails.send({
-      from: 'VigiExam <noreply@vigiexam.com>',
-      to: ['sales@vigiexam.com'], // Change to your sales email
+      from: 'VigiExam <noreply@vigiexam.eu>',
+      to: ['larsjaner45@gmail.com'], // Your email for notifications
       subject: `New Demo Request from ${firstName} ${lastName} - ${company}`,
       html: `
         <h2>New Demo Request</h2>
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
 
     // Send confirmation email to the user
     await resend.emails.send({
-      from: 'VigiExam <noreply@vigiexam.com>',
+      from: 'VigiExam <noreply@vigiexam.eu>',
       to: [email],
       subject: 'Thanks for your interest in VigiExam',
       html: `
@@ -69,4 +69,4 @@ export default async function handler(req, res) {
     console.error('Server error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
-}
+};
