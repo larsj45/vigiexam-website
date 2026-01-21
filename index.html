@@ -1973,27 +1973,53 @@
         });
 
         // Form submission
-        document.getElementById('demoForm').addEventListener('submit', function(e) {
+        document.getElementById('demoForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
+            const form = this;
+            const submitBtn = form.querySelector('.form-submit');
+            const originalBtnText = submitBtn.innerHTML;
+
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+
             // Collect form data
-            const formData = new FormData(this);
+            const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            // Log form data (in production, this would send to backend/HubSpot)
-            console.log('Demo Request Submitted:', data);
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
 
-            // Show success message
-            this.style.display = 'none';
-            document.getElementById('formSuccess').classList.add('active');
+                if (!response.ok) {
+                    throw new Error('Failed to submit');
+                }
 
-            // Reset after 3 seconds
-            setTimeout(() => {
-                this.style.display = 'block';
-                this.reset();
-                document.getElementById('formSuccess').classList.remove('active');
-                closeModal();
-            }, 3000);
+                // Show success message
+                form.style.display = 'none';
+                document.getElementById('formSuccess').classList.add('active');
+
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    form.style.display = 'block';
+                    form.reset();
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    document.getElementById('formSuccess').classList.remove('active');
+                    closeModal();
+                }, 3000);
+            } catch (error) {
+                console.error('Form submission error:', error);
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                alert('There was an error submitting the form. Please try again or email us directly at sales@vigiexam.com');
+            }
         });
 
         // Intersection Observer for animations
