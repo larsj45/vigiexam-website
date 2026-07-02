@@ -49,17 +49,18 @@ module.exports = async function handler(req, res) {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #0d9488;">Thank you for contacting VigiExam!</h2>
           <p>Hi ${firstName},</p>
-          <p>We've received your demo request and our team will be in touch within 24 hours to schedule a personalized walkthrough of our human-audited exam proctoring solution.</p>
-          <p>In the meantime, here's what makes VigiExam different:</p>
+          <p>We've received your request and a member of our team will be in touch shortly to understand your needs and put together the right setup for you.</p>
+          <p>In the meantime, here's what VigiExam helps you do:</p>
           <ul>
-            <li><strong>Human Oversight:</strong> Every AI flag is reviewed by certified proctors</li>
-            <li><strong>Global Coverage:</strong> Live proctors across EU and Latin America</li>
-            <li><strong>Enterprise Security:</strong> GDPR, ISO 27001, and SOC 2 compliant</li>
+            <li><strong>AI proctoring:</strong> identity verification, screen and audio monitoring, and tab-switch reporting during each exam</li>
+            <li><strong>Clear reports:</strong> a detailed report after every exam to support your review</li>
+            <li><strong>Human review when it helps:</strong> optional human oversight for flagged cases</li>
+            <li><strong>EU data protection:</strong> your data is handled in line with GDPR</li>
           </ul>
           <p>We look forward to speaking with you soon!</p>
           <p>Best regards,<br>The VigiExam Team</p>
           <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-          <p style="color: #666; font-size: 12px;">VigiExam - A Global Edtech Ventures company</p>
+          <p style="color: #666; font-size: 12px;">VigiExam &middot; operated by Auditelle SASU (France)</p>
         </div>
       `,
     });
