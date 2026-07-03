@@ -9,7 +9,8 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const { firstName, lastName, email, company, role, volume, message } = req.body;
+    const { firstName, lastName, email, company, role, volume, message,
+            leadReferrer, leadLanding, utmSource, utmMedium, utmCampaign } = req.body;
 
     // Validate required fields
     if (!firstName || !lastName || !email || !company) {
@@ -30,6 +31,11 @@ module.exports = async function handler(req, res) {
         <p><strong>Expected Volume:</strong> ${volume || 'Not specified'}</p>
         <p><strong>Message:</strong></p>
         <p>${message || 'No message provided'}</p>
+        <hr>
+        <h3 style="font-size: 14px; color: #0d9488;">Lead source</h3>
+        <p><strong>Referrer:</strong> ${leadReferrer || 'Not captured'}</p>
+        <p><strong>Landing page:</strong> ${leadLanding || 'Not captured'}</p>
+        <p><strong>UTM source / medium / campaign:</strong> ${utmSource || '—'} / ${utmMedium || '—'} / ${utmCampaign || '—'}</p>
         <hr>
         <p style="color: #666; font-size: 12px;">This lead came from the VigiExam website contact form.</p>
       `,

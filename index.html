@@ -1920,6 +1920,12 @@
                         <label for="message">How can we help?</label>
                         <textarea id="message" name="message" placeholder="Tell us about your proctoring needs..."></textarea>
                     </div>
+                    <!-- Lead source capture (populated on load; invisible to the visitor) -->
+                    <input type="hidden" id="leadReferrer" name="leadReferrer">
+                    <input type="hidden" id="leadLanding" name="leadLanding">
+                    <input type="hidden" id="utmSource" name="utmSource">
+                    <input type="hidden" id="utmMedium" name="utmMedium">
+                    <input type="hidden" id="utmCampaign" name="utmCampaign">
                     <button type="submit" class="btn btn-primary form-submit">
                         <span>Submit Request</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1928,7 +1934,7 @@
                 <div class="form-success" id="formSuccess">
                     <div class="form-success-icon">✓</div>
                     <h4>Request Submitted!</h4>
-                    <p>Thank you for your interest. Our team will contact you within 24 hours to schedule your demo.</p>
+                    <p>Thank you for your interest. Our team will be in touch shortly to understand your needs and schedule your demo.</p>
                 </div>
             </div>
         </div>
@@ -2070,6 +2076,30 @@
                 badge.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
         });
+
+        // Lead source capture: fill hidden fields so every lead carries where it came from
+        (function captureLeadSource() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const setField = (id, value) => {
+                    const el = document.getElementById(id);
+                    if (el && value) el.value = value;
+                };
+                setField('leadReferrer', document.referrer || 'direct');
+                setField('leadLanding', window.location.href);
+                setField('utmSource', params.get('utm_source'));
+                setField('utmMedium', params.get('utm_medium'));
+                setField('utmCampaign', params.get('utm_campaign'));
+            } catch (err) {
+                // never block the form on capture errors
+            }
+        })();
     </script>
+
+    <!-- Vercel Web Analytics (cookieless, GDPR-friendly) -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
