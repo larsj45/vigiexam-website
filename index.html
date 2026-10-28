@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VigiExam | Online Proctoring for Awarding Bodies</title>
-    <meta name="description" content="Online exam proctoring for awarding bodies and certification programmes: AI monitoring, clear reports and optional human review. Operated from France by Auditelle SASU, powered by TestWe.">
+    <title>VigiExam | Exam Platform, Recording Review and Live Invigilation</title>
+    <meta name="description" content="Explore TestWe for exam delivery. Human recording review and live invigilation are separately scoped and quoted to your requirements and availability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -443,8 +443,26 @@
 
         .floating-badge.badge-1 {
             top: 20px;
-            right: -20px;
+            right: 0;
+            max-width: 270px;
             animation-delay: 0s;
+        }
+
+        .floating-badge.badge-1 span {
+            white-space: normal;
+        }
+
+        @media (max-width: 768px) {
+            .floating-badge.badge-1 {
+                top: auto;
+                right: 0;
+                bottom: -28px;
+                left: 0;
+                width: max-content;
+                max-width: calc(100% - 24px);
+                margin: 0 auto;
+                font-size: 12px;
+            }
         }
 
         .floating-badge.badge-2 {
@@ -1457,7 +1475,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="#" class="btn btn-primary" onclick="openModal(); return false;">Request a Trial</a>
+                <a href="#" class="btn btn-primary" onclick="openModal(); return false;">Discuss your requirements</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <span></span>
@@ -1476,7 +1494,7 @@
             <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
         </ul>
         <div class="mobile-menu-cta">
-            <a href="#" class="btn btn-primary" onclick="openModal(); toggleMobileMenu(); return false;">Request a Trial</a>
+            <a href="#" class="btn btn-primary" onclick="openModal(); toggleMobileMenu(); return false;">Discuss your requirements</a>
         </div>
     </div>
 
@@ -1488,31 +1506,31 @@
             <div class="hero-content">
                 <div class="hero-text fade-up">
                     <h1>
-                        <span class="gradient-text">Remote exams</span><br>
-                        you can stand behind
+                        <span class="gradient-text">Support for</span><br>
+                        remote exams
                     </h1>
                     <p>
-                        Online proctoring for awarding bodies and certification programmes. AI monitoring during every exam, a clear report afterwards, and human review of flagged sessions when you need it. Operated from France.
+                        Exam delivery with TestWe. Human recording review and live invigilation, scoped separately to your programme. We agree staffing, languages, volumes and timings before delivery.
                     </p>
                     <div class="hero-cta">
                         <a href="#" class="btn btn-primary" onclick="openModal(); return false;">
-                            <span>Request a Trial</span>
+                            <span>Discuss your requirements</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+                        <a href="#how-it-works" class="btn btn-secondary">Explore the process</a>
                     </div>
                     <div class="hero-stats">
                         <div class="hero-stat">
-                            <span class="hero-stat-number">72h</span>
-                            <span class="hero-stat-label">Report Turnaround</span>
+                            <span class="hero-stat-number">Platform</span>
+                            <span class="hero-stat-label">Explore TestWe</span>
                         </div>
                         <div class="hero-stat">
-                            <span class="hero-stat-number">EU</span>
-                            <span class="hero-stat-label">Based Operator</span>
+                            <span class="hero-stat-number">Review</span>
+                            <span class="hero-stat-label">Exam recordings</span>
                         </div>
                         <div class="hero-stat">
-                            <span class="hero-stat-number">Trial</span>
-                            <span class="hero-stat-label">Before You Commit</span>
+                            <span class="hero-stat-number">Live</span>
+                            <span class="hero-stat-label">Invigilation, on request</span>
                         </div>
                     </div>
                 </div>
@@ -1524,34 +1542,30 @@
                                     <div class="hero-overlay-stat">
                                         <div class="hero-overlay-stat-icon">✓</div>
                                         <div>
-                                            <div class="hero-overlay-stat-value">Verified</div>
-                                            <div class="hero-overlay-stat-label">Identity Checked</div>
+                                            <div class="hero-overlay-stat-value">Exam platform</div>
+                                            <div class="hero-overlay-stat-label">Explore TestWe for delivery</div>
                                         </div>
                                     </div>
                                     <div class="hero-overlay-stat">
                                         <div class="hero-overlay-stat-icon">●</div>
                                         <div>
-                                            <div class="hero-overlay-stat-value">Recorded</div>
-                                            <div class="hero-overlay-stat-label">Webcam, Screen, Audio</div>
+                                            <div class="hero-overlay-stat-value">Recording review</div>
+                                            <div class="hero-overlay-stat-label">Human review, agreed protocol</div>
                                         </div>
                                     </div>
                                     <div class="hero-overlay-stat">
                                         <div class="hero-overlay-stat-icon">📄</div>
                                         <div>
-                                            <div class="hero-overlay-stat-value">Reported</div>
-                                            <div class="hero-overlay-stat-label">Evidence, Not Verdicts</div>
+                                            <div class="hero-overlay-stat-value">Live invigilation</div>
+                                            <div class="hero-overlay-stat-label">Onboarding or full-exam scope</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="floating-badge badge-1">
-                            <div class="badge-icon">👁️</div>
-                            <span>Human Review</span>
-                        </div>
-                        <div class="floating-badge badge-2">
-                            <div class="badge-icon">🤖</div>
-                            <span>AI Monitoring</span>
+                            <div class="badge-icon">i</div>
+                            <span>Illustrative planning view, not a live platform screen</span>
                         </div>
                     </div>
                 </div>
@@ -1563,7 +1577,7 @@
     <section class="trust-bar">
         <div class="container">
             <div class="trust-bar-content">
-                <span class="trust-label">Built For</span>
+                <span class="trust-label">For discussion with</span>
                 <div class="trust-logos">
                     <div class="trust-logo">
                         <div class="trust-logo-icon">🏛️</div>
@@ -1594,35 +1608,35 @@
                     <span>✦</span>
                     Why VigiExam
                 </span>
-                <h2 class="section-title">Secure exams, <span class="gradient-text">without the overhead</span></h2>
+                <h2 class="section-title">The platform and people <span class="gradient-text">your exams need</span></h2>
                 <p class="section-subtitle">
-                    Your candidates sit the exam from wherever they are. You get the evidence you need to stand behind the result.
+                    Choose the support your programme needs. Platform access, recording review and live invigilation are scoped separately and can be discussed together.
                 </p>
             </div>
             <div class="value-grid">
                 <div class="glass-card value-card fade-up fade-up-delay-1">
                     <div class="value-icon">🤖</div>
-                    <h3>AI Proctoring</h3>
-                    <p>Identity verification, webcam, screen and audio monitoring, and tab-switch reporting during every exam.</p>
-                    <span class="value-highlight">Every Session</span>
+                    <h3>Exam platform</h3>
+                    <p>Explore TestWe for exam delivery. Review candidate journeys, platform capabilities and integration needs with TestWe against your requirements.</p>
+                    <span class="value-highlight">Explore TestWe</span>
                 </div>
                 <div class="glass-card value-card fade-up fade-up-delay-2">
                     <div class="value-icon">👁️</div>
-                    <h3>Human Review</h3>
-                    <p>Trained reviewers check flagged sessions, so you see context and evidence rather than raw alerts.</p>
-                    <span class="value-highlight">When You Need It</span>
+                    <h3>Recording review</h3>
+                    <p>Human review of exam recordings against an agreed protocol, with documented observations for your team's decision. Access, volumes and turnaround are agreed in the proposal.</p>
+                    <span class="value-highlight">Post-exam human review</span>
                 </div>
                 <div class="glass-card value-card fade-up fade-up-delay-3">
                     <div class="value-icon">📊</div>
-                    <h3>Clear Reports</h3>
-                    <p>A report after each exam with timestamps and evidence. Your team takes the final decision.</p>
-                    <span class="value-highlight">Within 72 Hours</span>
+                    <h3>Live invigilation</h3>
+                    <p>Scope live supervision for your exam sessions. Identity and room checks at onboarding are different from supervising the whole exam; the required coverage is agreed explicitly.</p>
+                    <span class="value-highlight">Quoted subject to availability</span>
                 </div>
                 <div class="glass-card value-card fade-up fade-up-delay-4">
                     <div class="value-icon">🇪🇺</div>
-                    <h3>EU-Based Operator</h3>
-                    <p>Contracted and operated from France by Auditelle SASU, with personal data handled in line with GDPR.</p>
-                    <span class="value-highlight">Operated in France</span>
+                    <h3>Tailored delivery</h3>
+                    <p>We agree languages, time zones, concurrent candidates, trained staffing and lead time before any commitment. VigiExam is operated by Auditelle SASU in France; contractual roles are agreed for each proposal.</p>
+                    <span class="value-highlight">Scope before commitment</span>
                 </div>
             </div>
         </div>
@@ -1638,33 +1652,33 @@
                 </span>
                 <h2 class="section-title">How <span class="gradient-text">VigiExam</span> Works</h2>
                 <p class="section-subtitle">
-                    From a hands-on trial to your first live cohort
+                    From your requirements to a scoped delivery proposal
                 </p>
             </div>
             <div class="timeline">
                 <div class="timeline-step fade-up fade-up-delay-1">
                     <div class="step-number">1</div>
                     <div class="step-icon">🧪</div>
-                    <h3>Trial</h3>
-                    <p>Try the full candidate experience with two or three people from your own team before you commit.</p>
+                    <h3>Discuss requirements</h3>
+                    <p>Tell us whether you need a platform, recording review, onboarding checks or full-exam live invigilation.</p>
                 </div>
                 <div class="timeline-step fade-up fade-up-delay-2">
                     <div class="step-number">2</div>
                     <div class="step-icon">⚙️</div>
-                    <h3>Setup</h3>
-                    <p>We configure your exam, rules and candidate instructions with you, and handle the technical setup.</p>
+                    <h3>Scope the support</h3>
+                    <p>Explore platform fit with TestWe and define the human services you need, including volumes, languages, time zones and concurrent candidates.</p>
                 </div>
                 <div class="timeline-step fade-up fade-up-delay-3">
                     <div class="step-number">3</div>
                     <div class="step-icon">🔐</div>
-                    <h3>Exam Day</h3>
-                    <p>Candidates check their ID and system, then sit the exam from home while the session is monitored and recorded.</p>
+                    <h3>Review open questions</h3>
+                    <p>Agree the review or invigilation protocol, staffing availability, access permissions and data-protection arrangements for the proposed service.</p>
                 </div>
                 <div class="timeline-step fade-up fade-up-delay-4">
                     <div class="step-number">4</div>
                     <div class="step-icon">📊</div>
-                    <h3>Report</h3>
-                    <p>You receive a report with flagged moments and evidence, reviewed by a person when you choose that option.</p>
+                    <h3>Agree next steps</h3>
+                    <p>Receive a scoped proposal with responsibilities, pricing and delivery timings. Any demonstration or pilot is arranged separately, subject to availability and agreement.</p>
                 </div>
             </div>
         </div>
@@ -1676,47 +1690,45 @@
             <div class="proctors-content">
                 <div class="proctors-visual fade-up">
                     <div class="proctor-grid">
-                        <div class="proctor-avatar">👩‍💼</div>
-                        <div class="proctor-avatar">👨‍💻</div>
-                        <div class="proctor-avatar">👩‍🏫</div>
-                        <div class="proctor-avatar">👨‍🎓</div>
-                        <div class="proctor-avatar">👩‍🔬</div>
-                        <div class="proctor-avatar">👨‍💼</div>
+                        <div class="proctor-avatar">1</div>
+                        <div class="proctor-avatar">2</div>
+                        <div class="proctor-avatar">3</div>
+                        <div class="proctor-avatar">4</div>
                     </div>
                     <div class="proctor-stat-card card-1">
-                        <div class="proctor-stat-value">72h</div>
-                        <div class="proctor-stat-label">Report</div>
+                        <div class="proctor-stat-value">Fit</div>
+                        <div class="proctor-stat-label">Questions to explore</div>
                     </div>
                     <div class="proctor-stat-card card-2">
-                        <div class="proctor-stat-value">EU</div>
-                        <div class="proctor-stat-label">Operator</div>
+                        <div class="proctor-stat-value">Next</div>
+                        <div class="proctor-stat-label">Steps to discuss</div>
                     </div>
                 </div>
                 <div class="proctors-text fade-up fade-up-delay-2">
                     <h2>Powered by <span class="gradient-text">TestWe</span></h2>
                     <p>
-                        We run your exams on TestWe, an established European exam platform, and operate it for you: setup, candidate support and reporting.
+                        TestWe is the exam technology option we help you explore. Human recording review and live invigilation are separate service scopes, not a promise that a particular TestWe licence includes reviewers or live proctors. We clarify responsibilities and availability in the proposal.
                     </p>
                     <div class="proctor-features">
                         <div class="proctor-feature">
                             <div class="proctor-feature-icon">🧩</div>
                             <div>
-                                <h4>Proven exam engine</h4>
-                                <p>A mature platform already used by universities and public institutions in Europe</p>
+                                <h4>Explore the platform</h4>
+                                <p>Review the platform and relevant capabilities with TestWe against your exam delivery requirements.</p>
                             </div>
                         </div>
                         <div class="proctor-feature">
                             <div class="proctor-feature-icon">🤝</div>
                             <div>
-                                <h4>One point of contact</h4>
-                                <p>We handle onboarding, configuration and questions, so your team does not have to</p>
+                                <h4>Human services, separately scoped</h4>
+                                <p>Discuss recording review, live onboarding checks or supervision throughout the exam. Team, protocol and coverage are agreed before delivery.</p>
                             </div>
                         </div>
                         <div class="proctor-feature">
                             <div class="proctor-feature-icon">🎥</div>
                             <div>
-                                <h4>Live options on request</h4>
-                                <p>For programmes that need it, ask us about live onboarding and room checks</p>
+                                <h4>Demonstration, if suitable</h4>
+                                <p>A demonstration may be explored subject to your requirements and TestWe availability.</p>
                             </div>
                         </div>
                     </div>
@@ -1733,32 +1745,32 @@
                     <span>✦</span>
                     Data Protection
                 </span>
-                <h2 class="section-title">Your candidates' data, <span class="gradient-text">handled carefully</span></h2>
+                <h2 class="section-title">Data protection questions <span class="gradient-text">to resolve before a pilot</span></h2>
                 <p class="section-subtitle">
-                    Exam recordings are personal data. We treat them that way.
+                    Before a pilot or human review service, agree how candidate recordings and live sessions will be handled. Confirm the relevant roles and safeguards with the platform provider, the service team and your organisation.
                 </p>
             </div>
             <div class="compliance-grid">
                 <div class="glass-card compliance-card fade-up fade-up-delay-1">
                     <div class="compliance-badge">
-                        <span class="compliance-badge-text">GDPR</span>
+                        <span class="compliance-badge-text">Roles</span>
                     </div>
-                    <h3>GDPR as the baseline</h3>
-                    <p>Personal data is processed in line with GDPR, under a data processing agreement with each customer.</p>
+                    <h3>Controller and processor roles</h3>
+                    <p>Clarify who determines purposes and means, who processes data, and which parties hold each role.</p>
                 </div>
                 <div class="glass-card compliance-card fade-up fade-up-delay-2">
                     <div class="compliance-badge">
-                        <span class="compliance-badge-text">EU</span>
+                        <span class="compliance-badge-text">Terms</span>
                     </div>
-                    <h3>European contracting entity</h3>
-                    <p>Your contract is with Auditelle SASU, a company registered in France. Sub-processors, including TestWe, are disclosed upfront.</p>
+                    <h3>Contracting and access</h3>
+                    <p>Confirm the contracting party, authorised access, and any data processing agreement required for the proposed arrangement.</p>
                 </div>
                 <div class="glass-card compliance-card fade-up fade-up-delay-3">
                     <div class="compliance-badge">
-                        <span class="compliance-badge-text">YOU<br>DECIDE</span>
+                        <span class="compliance-badge-text">Review</span>
                     </div>
-                    <h3>Evidence, not verdicts</h3>
-                    <p>We flag and document. Decisions about candidates and results always stay with your organisation.</p>
+                    <h3>Retention and hosting</h3>
+                    <p>Agree recording retention, hosting locations, access by reviewers or proctors and any subprocessors before candidate-data sharing.</p>
                 </div>
             </div>
         </div>
@@ -1768,13 +1780,13 @@
     <section class="section cta" id="contact">
         <div class="container">
             <div class="cta-content fade-up">
-                <h2>Try it with <span class="gradient-text">your own candidates</span></h2>
+                <h2>Discuss your <span class="gradient-text">assessment requirements</span></h2>
                 <p>
-                    Tell us about your exams and expected volume. We will set up a hands-on trial and a quote per exam.
+                    Tell us about your platform, recording review or live invigilation needs. We will discuss the scope before making any delivery commitment.
                 </p>
                 <div class="cta-buttons">
                     <a href="#" class="btn btn-primary" onclick="openModal(); return false;">
-                        <span>Request a Trial</span>
+                        <span>Discuss your requirements</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -1790,7 +1802,7 @@
                     <a href="#" class="logo logo-large">
                         <img src="vigiexam-logo-white.png" alt="VigiExam">
                     </a>
-                    <p>Online exam proctoring for awarding bodies and certification programmes. Operated by Auditelle SASU, France. Powered by TestWe.</p>
+                    <p>Exam technology through TestWe, human recording review and live invigilation scoped to your programme. Operated by Auditelle SASU in France.</p>
                 </div>
                 <div class="footer-column">
                     <h4>VigiExam</h4>
@@ -1804,7 +1816,7 @@
                 <div class="footer-column">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="#" onclick="openModal(); return false;">Request a Trial</a></li>
+                        <li><a href="#" onclick="openModal(); return false;">Discuss your requirements</a></li>
                     </ul>
                 </div>
             </div>
@@ -1819,13 +1831,15 @@
         <div class="modal" onclick="event.stopPropagation()">
             <div class="modal-header">
                 <div>
-                    <h3>Request a Trial</h3>
-                    <p>Tell us about your exams and we will set up a hands-on trial</p>
+                    <h3>Discuss your requirements</h3>
+                    <p>Tell us about platform access, recording review, live onboarding or full-exam invigilation. Delivery depends on an agreed scope and availability.</p>
                 </div>
                 <button class="modal-close" onclick="closeModal()">×</button>
             </div>
             <div class="modal-body">
-                <form id="demoForm">
+                <p id="contactPrivacyNotice" role="status" style="padding:16px;border:1px solid rgba(45,212,191,.35);border-radius:12px;margin-bottom:20px;">Online enquiries are temporarily unavailable while we finalise our privacy information. No details can be submitted here.</p>
+                <form id="demoForm" hidden aria-hidden="true">
+                    <fieldset disabled aria-describedby="contactPrivacyNotice" style="border:0;min-width:0;">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
@@ -1859,7 +1873,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="volume">Expected Annual Volume</label>
+                            <label for="volume">Approximate annual assessment volume</label>
                             <select id="volume" name="volume">
                                 <option value="">Select volume</option>
                                 <option value="under_1000">Under 1,000 exams</option>
@@ -1870,8 +1884,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">How can we help?</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your proctoring needs..."></textarea>
+                        <label for="message">What would you like to explore?</label>
+                        <textarea id="message" name="message" placeholder="For example: recording review volumes, live session dates, languages or platform requirements."></textarea>
+                        <small>Please share business requirements only. Do not include candidate data or exam recordings.</small>
                     </div>
                     <!-- Lead source capture (populated on load; invisible to the visitor) -->
                     <input type="hidden" id="leadReferrer" name="leadReferrer">
@@ -1879,15 +1894,16 @@
                     <input type="hidden" id="utmSource" name="utmSource">
                     <input type="hidden" id="utmMedium" name="utmMedium">
                     <input type="hidden" id="utmCampaign" name="utmCampaign">
-                    <button type="submit" class="btn btn-primary form-submit">
-                        <span>Submit Request</span>
+                    <button type="submit" class="btn btn-primary form-submit" disabled>
+                        <span>Send enquiry</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
+                    </fieldset>
                 </form>
                 <div class="form-success" id="formSuccess">
                     <div class="form-success-icon">✓</div>
-                    <h4>Request Submitted!</h4>
-                    <p>Thank you for your interest. We will be in touch shortly to understand your exams and set up a trial.</p>
+                    <h4>Enquiry received</h4>
+                    <p>Thank you. Your enquiry has been received. If we can take the discussion forward, we will use the contact details you provided to discuss requirements and possible next steps.</p>
                 </div>
             </div>
         </div>
@@ -1931,16 +1947,20 @@
             }
         });
 
+        // Keep enquiries paused until lead privacy information is reviewed.
+        const contactFormEnabled = false;
+
         // Form submission
         document.getElementById('demoForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            if (!contactFormEnabled) return;
 
             const form = this;
             const submitBtn = form.querySelector('.form-submit');
             const originalBtnText = submitBtn.innerHTML;
 
             // Show loading state
-            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.innerHTML = '<span>Sending enquiry...</span>';
             submitBtn.disabled = true;
 
             // Collect form data
@@ -1977,7 +1997,7 @@
                 console.error('Form submission error:', error);
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-                alert('There was an error submitting the form. Please try again or email us directly at sales@vigiexam.com');
+                alert('We could not submit your enquiry. Please try again later.');
             }
         });
 
@@ -2032,6 +2052,7 @@
 
         // Lead source capture: fill hidden fields so every lead carries where it came from
         (function captureLeadSource() {
+            if (!contactFormEnabled) return;
             try {
                 const params = new URLSearchParams(window.location.search);
                 const setField = (id, value) => {
